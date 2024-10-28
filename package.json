@@ -1,0 +1,25 @@
+{
+  "name": "you-are-the-code-highlighting",
+  "displayName": "You are the Code Highlighting",
+  "description": "syntax highlighting like in the game you are the code by thinkwithgames",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "youarethecode",
+      "aliases": ["You are the code", "youarethecode"],
+      "extensions": [".yatc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "youarethecode",
+      "scopeName": "source.yatc",
+      "path": "./syntaxes/youarethecode.tmLanguage.json"
+    }]
+  }
+}

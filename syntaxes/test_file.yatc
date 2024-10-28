@@ -1,0 +1,74 @@
+if the while
+
+output 1>
+output 2
+output 3
+
+
+123
+===================
+output 5->
+output 7
+output 9
+output 6---->
+
+
+967
+===================
+output 0
+output 0
+output 53--->
+output 5->
+
+
+535
+===================
+output 0
+goto 5
+output 867
+output 5
+output 9->
+
+
+9867
+===================
+goto 3
+goto 4
+goto 2
+output 9>
+
+
+9999
+===================
+store $a = 5->
+output 3
+output $a
+
+
+355
+===================
+store $a = $a + 5
+output 21-->
+output $a
+
+
+152
+===================
+store $a = 5
+output 0>
+output $b
+store $b = $a + 7
+output $a
+
+
+0712
+===================
+store $b = 6
+store $ab = 2
+output $ab
+store $b = $ab---->
+output $b
+
+
+2606
+===================
