@@ -1,32 +1,62 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "youarethecode",
+	"name": "You are the Code",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
+			"include": "#everything"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.youarethecode",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.youarethecode",
-			"begin": "\"",
-			"end": "\"",
+		"everything": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.youarethecode",
-					"match": "\\\\."
+					"name": "keyword.control.youarethecode",
+					"match": "\\b(goto)\\b"
+				},
+				{
+					"name": "invalid",
+					"match": "\\b(store)\\b"
+				},
+				{
+					"name": "support.constant",
+					"match": "\\b(output)\\b"
+				},
+				{
+					"name": "invalid",
+					"match": "-*>"
+				},
+				{
+					"name": "entity.name.class",
+					"match": "\\$\\w+"
+				},
+				{
+					"match": "\\b(?:true|false|\\d+)\\b",
+					"name": "constant.language"
+				},
+				{
+					"name": "string.quoted.double.youarethecode",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.youarethecode",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "comment.block",
+					"begin": "^=",
+					"end": "$",
+					"patterns": [
+						{
+							"name": "constant.character.escape.youarethecode",
+							"match": "\\\\."
+						}
+					]
 				}
 			]
 		}
 	},
-	"scopeName": "source.youarethecode"
+	"scopeName": "source.yatc"
 }
