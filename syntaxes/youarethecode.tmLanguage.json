@@ -11,27 +11,59 @@
 			"patterns": [
 				{
 					"name": "keyword.control.youarethecode",
-					"match": "\\b(goto)\\b"
+					"match": "\\b(goto|swap|run|dupe)\\b"
 				},
 				{
-					"name": "invalid",
-					"match": "\\b(store)\\b"
+					"name": "store.yatc",
+					"match": "\\b(store|load|enter)\\b"
+				},
+				{
+					"name": "relative_spot.yatc",
+					"match": "\\b(above|below|prev|next)\\b"
+				},
+				{
+					"name": "level_name.yatc",
+					"match": "@.+"
+				},
+				{
+					"name": "level_reference.yatc",
+					"match": "\\*\\w+"
+				},
+				{
+					"name": "broken.yatc",
+					"match": "\\b(broken)\\b"
 				},
 				{
 					"name": "support.constant",
-					"match": "\\b(output)\\b"
-				},
-				{
-					"name": "invalid",
-					"match": "-*>"
+					"match": "\\b(pay|output)\\b"
 				},
 				{
 					"name": "entity.name.class",
 					"match": "\\$\\w+"
 				},
 				{
-					"match": "\\b(?:true|false|\\d+)\\b",
-					"name": "constant.language"
+					"name": "constant.language",
+					"match": "\\b(?:true|false|\\d+)\\b"
+				},
+				{
+					"name": "lines.yatc",
+					"match": "\\b(lines|zap)\\b"
+				},
+				{
+					"name": "comment.block.documentation.yatc",
+					"match": "##.+"
+				},
+				{
+					"name": "comment.line.yatc",
+					"match": "#.*"
+				},
+				{
+					"name": "level_list_reference.yatc",
+					"match": "&.*"
+				},
+				{
+					"name": "fragile.yatc",
+					"match": "~"
 				},
 				{
 					"name": "string.quoted.double.youarethecode",
@@ -54,6 +86,10 @@
 							"match": "\\\\."
 						}
 					]
+				},
+				{
+					"name": "math_symbols.yatc",
+					"match": "\\+|-|>|<|=|\\*|/|%"
 				}
 			]
 		}

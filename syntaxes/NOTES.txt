@@ -1,0 +1,3 @@
+edit the youarethecode.tmLanguage.json file with "name" being called what you want, like "swap.yatc"
+
+then in vscode settings, inside "editor.tokenColorCustomizations", you can customize colors
